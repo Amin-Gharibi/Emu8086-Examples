@@ -59,10 +59,8 @@ not_divisor:
     jmp find_divisor        ; repeat for the next divisor
 
 check_sum:
-    push ax
     mov ax, number
     cmp sum_of_divisors, ax ; compare sum of divisors with the number
-    pop ax
     je perfect              ; if equal, it's a perfect number
     mov ax, 0               ; if not equal, set ax to 0 (not perfect)
     jmp done                ; all divisors were checked. finish checking
